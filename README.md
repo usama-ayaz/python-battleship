@@ -4,16 +4,29 @@ This repo is the start-up point to submit the battleship game exercise for
 Profit Tools. It's recommended you read all the instructions before you start
 the exercise.
 
-The exercise will be timed to 24 hours to be completed by the submission of a
-pull request with the answer. The timer will start when you gain access to the
-repo.
+The exercise will be timed to 24 hours starting at the time you gain access to
+the repo. The solution should be submitted through a pull request into the repo.
 
-## Submission Process
+## The Goal
 
-You should clone or fork the repo to get started. You should create a branch for
-your response, and submit the solution by creating a pull request. Submitting
-your response directly to master (if you have write access) will immediately 
-disqualify you.
+The goal of this exercise is to evaluate your object oriented programming skills.
+The solution should have an adequate object oriented design, and demonstrate 
+good separation of concerns.
+
+There are tests setup to validate the requirements of the exercise. Below, there
+are instructions on how to run them, in case you want to validate your work
+before submitting the exercise.
+
+The results from these tests are not the main factor to evaluate the solution. 
+Instead, the code implementation and design will be evaluated, but it doesn't
+hurt that the tests pass.
+
+Unit tests are an important factor for our projects. Writting unit tests for the
+solution is a big plus. The unit tests should be written in the `test` folder, 
+and can be executed using the `bolt ut` command. 
+
+You can run the unit tests and have them monitor changes using the `bolt ct` 
+command. The tests will be executed every time changes are saved.
 
 ## Setup the Development Environment
 
@@ -21,8 +34,9 @@ This exercise should be completed using Python 3.6 or higher. Solutions that
 don't work in that version of Python will not be accepted. Make sure you have
 the right Python version.
 
-Once you've clone or forked the repo and downloaded all the source locally, you
-can install the necessary requirements by running:
+Start by cloning the repo or creating your own fork. Once you've clone or forked 
+the repo and downloaded all the source locally, you can install the necessary 
+requirements by running:
 
 ```console
 $ pip install -r requirements.txt
@@ -53,6 +67,9 @@ coordinates for the shot.
 
 All the functions for the endpoints have already been provided in the
 `/battleship/api.py` file. You need to fill the implementation.
+
+You should add your model and business logic classes into a separate module(s).
+The architecture will also be evaluated.
 
 ### Creating a New Game
 
@@ -179,3 +196,15 @@ As an example `x=10` and `y=7` falls outside of the board.
 
 A game can be deleted by sending a `DELETE` request to the endpoint. Deleting
 a game allows to start the game from scratch.
+
+## Submission Process
+
+Your solution should be submitted by creating a pull request with your changes.
+Submitting your solution directly into master will immediately disqualify you.
+You can create a pull request at any time and update it as you implement or 
+improve the solution.
+
+The solution will not be evaluated until the deadline of 24 hours is met. Any
+changes after the deadline will not be considered.
+
+Good luck!
