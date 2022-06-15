@@ -15,6 +15,11 @@ jobs:
         python-version: ["3.9"]
     
     steps:
+      - name: Auto Assign Action
+        uses: kentaro-m/auto-assign-action@v1.2.1
+        with:
+          # A path for the auto-assign configuration
+          configuration-path: .github/reviewers.yml
       - name: Checkout Sources
         uses: actions/checkout@v3
       - name: Setup Python ${{ matrix.python-version }}
@@ -26,9 +31,5 @@ jobs:
         run: bolt ut
       - name: Run Feature Tests
         run: bolt ft
-      - name: Auto Assign Action
-        uses: kentaro-m/auto-assign-action@v1.2.1
-        with:
-          # A path for the auto-assign configuration
-          configuration-path: .github/reviewers.yml
+      
         
