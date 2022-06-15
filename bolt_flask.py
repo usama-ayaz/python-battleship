@@ -1,4 +1,6 @@
 import subprocess
+import sys
+
 import bolt.api as btapi
 
 class StartFlaskServiceTask(btapi.Task):
@@ -16,7 +18,7 @@ class StartFlaskServiceTask(btapi.Task):
         if not self.startup_script: raise StartupScriptNotSpecifiedError()
 
     def _execute(self):
-        args = ['python', self.startup_script]
+        args = [sys.executable, self.startup_script]
         self.process = self._popen_script(args)
 
     def _popen_script(self, args):

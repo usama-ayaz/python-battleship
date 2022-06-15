@@ -1,19 +1,19 @@
-from http import HTTPStatus
+import http
 
-from flask import Flask, jsonify
+import flask
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 @app.route('/battleship', methods=['POST'])
 def create_battleship_game():
-    return jsonify({}), HTTPStatus.NOT_IMPLEMENTED
+    return flask.jsonify({}), http.HTTPStatus.NOT_IMPLEMENTED
 
 
 @app.route('/battleship', methods=['PUT'])
 def shot():
-    return jsonify({}), HTTPStatus.NOT_IMPLEMENTED
+    return flask.jsonify({}), http.HTTPStatus.NOT_IMPLEMENTED
 
 
 @app.route('/battleship', methods=['DELETE'])
 def delete_battleship_game():
-    return jsonify({}), HTTPStatus.NOT_IMPLEMENTED
+    return flask.jsonify({}), http.HTTPStatus.NOT_IMPLEMENTED
