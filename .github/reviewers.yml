@@ -1,6 +1,0 @@
-addReviewers: true
-reviewers:
-  - @CurroRodriguez
-  - @arahmanhamdy
-  - @dekay2001
-numberOfReviewers: 0  # Adds everybody.
