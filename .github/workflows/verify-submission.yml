@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
-      - uses: envasetechnologies/.github/actions/python/install-requirements@v0
+      - uses: envasetechnologies/.github/actions/python/install-requirements@v1
       - name: Run Unit Tests
         run: bolt ut
       - name: Run Feature Tests
